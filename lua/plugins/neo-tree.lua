@@ -10,7 +10,10 @@ return {
   opts = {
     filesystem = {
       hijack_netrw_behavior = "open_current",
-    }
+    },
+  },
+  keys = {
+    { "<leader>e", "<CMD>Neotree toggle float<CR>", silent = true, desc = "Toggle floating file explorer" },
   },
 }
 
