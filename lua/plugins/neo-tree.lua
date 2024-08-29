@@ -15,5 +15,6 @@ return {
   keys = {
     { "<leader>e", "<CMD>Neotree toggle float<CR>", silent = true, desc = "Toggle floating file explorer" },
   },
+  lazy = false,
 }
 
