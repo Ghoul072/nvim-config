@@ -1,4 +1,4 @@
-# NeoVIM config
+# Neovim config
 
 ## Table of Contents
 
