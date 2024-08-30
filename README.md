@@ -64,7 +64,7 @@ You can apply this approach to any Neovim distribution that you would like to tr
 This section is dedicated to thanking all the sources that have helped and inspired me in learning Neovim and creating this config
 
 - [VIM Adventures](https://vim-adventures.com)
-- [Neovim Tutor](https://neovim.io/doc/user/usr_01.html#tutor)
+- [Neovim Tutor](https://neovim.io/doc/user/usr_01.html#vimtutor)
 - [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim/blob/master/README.md)
 - [adibhanna](https://github.com/adibhanna/nvim)
 - [That one senior at work who told me to start learning VIM](https://github.com/lishaan)
