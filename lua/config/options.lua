@@ -43,5 +43,6 @@ vim.schedule(function()
   opt.clipboard = 'unnamedplus'
 end)
 
-
+-- Disable mouse
+opt.mouse = ""
 
