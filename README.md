@@ -16,7 +16,7 @@
 - [Git](https://git-scm.com/downloads) >= 2.19.0
 - [Neovim](https://neovim.io) >= 0.8.0
 - [Ripgrep](https://github.com/BurntSushi/ripgrep#installation)
-- A [Nerd Font.](https://www.nerdfonts.com) 
+- [A Nerd Font](https://www.nerdfonts.com) 
 - [Lua](https://www.lua.org/download.html)
 - [Luarocks](https://luarocks.org)
 
@@ -52,6 +52,8 @@ For example:
 - Then when you run Neovim with your custom alias, it will use the respective config directory and its matching local directory '~/.local/share/{custom_config_name}'.
 
 You can apply this approach to any Neovim distribution that you would like to try out
+
+That's it! You can now run the `nvim` command from your terminal to start Neovim and Lazy will install all the plugins you have. Use `:Lazy` to view current plugin status. Hit `q` to close the window.
 
 ## Plugins
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
