@@ -46,3 +46,5 @@ end)
 -- Disable mouse
 opt.mouse = ""
 
+opt.cmdheight = 0
+
