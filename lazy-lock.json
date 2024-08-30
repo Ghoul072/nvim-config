@@ -1,4 +1,5 @@
 {
+  "gitsigns.nvim": { "branch": "main", "commit": "899e993850084ea33d001ec229d237bc020c19ae" },
   "image.nvim": { "branch": "master", "commit": "4007cddc4cfc1b5ddd49744a38362e7b0432b3a0" },
   "indent-blankline.nvim": { "branch": "master", "commit": "db926997af951da38e5004ec7b9fbdc480b48f5d" },
   "lazy.nvim": { "branch": "main", "commit": "077102c5bfc578693f12377846d427f49bc50076" },
