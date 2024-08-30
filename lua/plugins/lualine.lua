@@ -4,6 +4,6 @@ return {
   lazy = false,
   opts = {
     theme = "auto",
-    extensions = { "neo-tree" },
+    extensions = { "neo-tree", "lazy" },
   },
 }
