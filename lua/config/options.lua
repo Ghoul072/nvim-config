@@ -1,6 +1,3 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -10,6 +7,7 @@ local opt = vim.opt
 
 -- Sidebar
 opt.relativenumber = true
+opt.number = true
 opt.signcolumn = 'yes'
 opt.cursorline = true
 
@@ -37,7 +35,6 @@ opt.backspace = "indent,eol,start"
 -- Search and replace settings
 opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- smartly assume if you want case sensitive
-opt.inccommand = 'split'
 
 -- Sync system and nvim clipboard
 opt.clipboard:append('unnamedplus')
