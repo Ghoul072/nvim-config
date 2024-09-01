@@ -9,15 +9,16 @@ local opt = vim.opt
 -- [[ Layout and Window Settings ]]
 
 -- Sidebar
-opt.number = true
+opt.relativenumber = true
 opt.signcolumn = 'yes'
+opt.cursorline = true
 
 -- Window Split
 opt.splitright = true
 opt.splitbelow = true
 
 -- Cursor settings
-opt.scrolloff = 10
+opt.scrolloff = 10 -- minimum number of lines to keep above/below cursor
 
 -- [[ Text Settings ]]
 
@@ -25,23 +26,21 @@ opt.scrolloff = 10
 opt.undofile = true
 
 -- Tab, indent, and space settings
-opt.list = true
-opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
-opt.expandtab = true
-opt.smartindent = true
-opt.tabstop = 2
-opt.shiftwidth = 2
-opt.breakindent = true
+opt.expandtab = true -- expand tab to spaces
+opt.smartindent = true -- smarter indentations
+opt.tabstop = 2 -- 2 spaces for tabs
+opt.shiftwidth = 2 -- 2 spaces for indent width
+opt.wrap = false -- don't wrap lines
+
+opt.backspace = "indent,eol,start"
 
 -- Search and replace settings
-opt.ignorecase = true
-opt.smartcase = true
+opt.ignorecase = true -- ignore case when searching
+opt.smartcase = true -- smartly assume if you want case sensitive
 opt.inccommand = 'split'
 
 -- Sync system and nvim clipboard
-vim.schedule(function()
-  opt.clipboard = 'unnamedplus'
-end)
+opt.clipboard:append('unnamedplus')
 
 -- Disable mouse
 opt.mouse = ""
