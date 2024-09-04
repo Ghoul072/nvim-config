@@ -21,6 +21,7 @@ return {
       dashboard.button( "e", "  File Explorer", ":Neotree toggle current<CR>"),
       dashboard.button( "f", "  Find File", ":Telescope find_files<CR>"),
       dashboard.button( "r", "  Recent"   , ":Telescope oldfiles<CR>"),
+      dashboard.button( "l", "󰁯  Restore Last Session", ":SessionRestore<CR><CR>" ),
       dashboard.button( "q", "  Quit NVIM", ":qa<CR>"),
     }
 
