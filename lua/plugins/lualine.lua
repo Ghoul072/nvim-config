@@ -6,4 +6,22 @@ return {
     theme = "auto",
     extensions = { "neo-tree", "lazy" },
   },
+  config = function()
+    local lazy_status = require("lazy.status")
+
+    require("lualine").setup({
+      sections = {
+        lualine_x = {
+          {
+            lazy_status.updates,
+            cond = lazy_status.has_updates,
+            -- color = { fg = "ff8800" }
+          },
+          { "encoding" },
+          { "fileformat" },
+          { "filetype" },
+        },
+      },
+    })
+  end,
 }
