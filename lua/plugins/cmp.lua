@@ -37,10 +37,11 @@ return {
         ["<C-b>"] = mapping.scroll_docs(-4),
         ["<C-f>"] = mapping.scroll_docs(4),
         ["<C-space>"] = mapping.complete(),
-        ["<C-f>"] = mapping.abort(),
+        ["<C-e>"] = mapping.abort(),
         ["<CR>"] = mapping.confirm({ select = false }),
       }),
       sources = cmp.config.sources({
+        { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
