@@ -34,7 +34,7 @@ return {
         "stylua",
         "isort",
         "black",
-      }
+      },
     })
   end,
 }

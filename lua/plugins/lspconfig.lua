@@ -20,7 +20,7 @@ return {
         opts.desc = "Show LSP references"
         keymap.set("n", "gR", ":Telescope lsp_references<CR>", opts)
 
-        opts.desc ="Go to declaration"
+        opts.desc = "Go to declaration"
         keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 
         opts.desc = "Show LSP definitions"
@@ -75,7 +75,7 @@ return {
 
       ["tsserver"] = function()
         lspconfig["ts_ls"].setup({
-          capabilities = capabilitiesm
+          capabilities = capabilities,
         })
       end,
 

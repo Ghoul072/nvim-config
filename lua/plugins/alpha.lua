@@ -17,16 +17,16 @@ return {
     }
 
     dashboard.section.buttons.val = {
-      dashboard.button( "n", "  New File" , ":ene <BAR> startinsert <CR>"),
-      dashboard.button( "e", "  File Explorer", ":Neotree toggle current<CR>"),
-      dashboard.button( "f", "  Find File", ":Telescope find_files<CR>"),
-      dashboard.button( "r", "  Recent"   , ":Telescope oldfiles<CR>"),
-      dashboard.button( "l", "󰁯  Restore Last Session", ":SessionRestore<CR><CR>" ),
-      dashboard.button( "q", "  Quit NVIM", ":qa<CR>"),
+      dashboard.button("n", "  New File", ":ene <BAR> startinsert <CR>"),
+      dashboard.button("e", "  File Explorer", ":Neotree toggle current<CR>"),
+      dashboard.button("f", "  Find File", ":Telescope find_files<CR>"),
+      dashboard.button("r", "  Recent", ":Telescope oldfiles<CR>"),
+      dashboard.button("l", "󰁯  Restore Last Session", ":SessionRestore<CR><CR>"),
+      dashboard.button("q", "  Quit NVIM", ":qa<CR>"),
     }
 
     alpha.setup(dashboard.opts)
-    
+
     vim.cmd([[
         autocmd FileType alpha setlocal nofoldenable
     ]])

@@ -3,24 +3,24 @@ return {
     "lewis6991/gitsigns.nvim",
     opts = {
       signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
-        untracked    = { text = '┆' },
+        add = { text = "+" },
+        change = { text = "~" },
+        delete = { text = "_" },
+        topdelete = { text = "‾" },
+        changedelete = { text = "~" },
+        untracked = { text = "┆" },
       },
       signs_staged = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
-        untracked    = { text = '┆' },
+        add = { text = "+" },
+        change = { text = "~" },
+        delete = { text = "_" },
+        topdelete = { text = "‾" },
+        changedelete = { text = "~" },
+        untracked = { text = "┆" },
       },
       on_attach = function(bufnr)
-        local gs = require 'gitsigns'
-        
+        local gs = require("gitsigns")
+
         local function map(mode, l, r, desc)
           vim.keymap.set(mode, l, r, { buffer = bufnr, desc = desc })
         end
@@ -39,9 +39,9 @@ return {
         map("n", "<leader>hb", gs.blame_line, "Git [b]lame line")
         map("n", "<leader>hd", gs.diffthis, "Git [d]iff against index")
         map("n", "<leader>hD", function()
-          gs.diffthis('@')
+          gs.diffthis("@")
         end, "git [D]iff against last commit")
-        
+
         -- Actions (visual mode)
         map("v", "<leader>hs", function()
           gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
@@ -53,7 +53,7 @@ return {
         -- Toggles
         map("n", "<leader>tb", gs.toggle_current_line_blame, "Git [t]oggle line [b]lame")
         map("n", "<leadeer>td", gs.toggle_deleted, "Git [t]oggle [d]eleted")
-      end
+      end,
     },
-  }
+  },
 }

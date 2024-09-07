@@ -8,7 +8,7 @@ local opt = vim.opt
 -- Sidebar
 opt.relativenumber = true
 opt.number = true
-opt.signcolumn = 'yes'
+opt.signcolumn = "yes"
 opt.cursorline = true
 
 -- Window Split
@@ -37,10 +37,9 @@ opt.ignorecase = true -- ignore case when searching
 opt.smartcase = true -- smartly assume if you want case sensitive
 
 -- Sync system and nvim clipboard
-opt.clipboard:append('unnamedplus')
+opt.clipboard:append("unnamedplus")
 
 -- Disable mouse
 opt.mouse = ""
 
 opt.cmdheight = 0
-

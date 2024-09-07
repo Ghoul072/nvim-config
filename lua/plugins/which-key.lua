@@ -1,8 +1,8 @@
 return {
-  'folke/which-key.nvim',
-  event = 'VimEnter',
+  "folke/which-key.nvim",
+  event = "VimEnter",
   opts = {
-    preset = 'helix',
+    preset = "helix",
   },
   init = function()
     vim.o.timeout = true
