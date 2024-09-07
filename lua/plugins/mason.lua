@@ -30,10 +30,14 @@ return {
 
     mason_tool_installer.setup({
       ensure_installed = {
+        -- formatters
         "prettier",
         "stylua",
         "isort",
         "black",
+        -- linters
+        "pylint",
+        "eslint_d",
       },
     })
   end,
