@@ -30,29 +30,31 @@ return {
         map("n", "[h", gs.prev_hunk, "Jump to previous git [h]unk")
 
         -- Actions (normal mode)
-        map("n", "<leader>hs", gs.stage_hunk, "Git [s]tage hunk")
-        map("n", "<leader>hr", gs.reset_hunk, "Git [r]eset hunk")
-        map("n", "<leader>hS", gs.stage_buffer, "Git [S]tage buffer")
-        map("n", "<leader>hu", gs.undo_stage_hunk, "Git [u]ndo stage hunk")
-        map("n", "<leader>hR", gs.reset_buffer, "Git [R]eset buffer")
-        map("n", "<leader>hp", gs.preview_hunk, "Git [p]review hunk")
-        map("n", "<leader>hb", gs.blame_line, "Git [b]lame line")
-        map("n", "<leader>hd", gs.diffthis, "Git [d]iff against index")
+        map("n", "<leader>hs", gs.stage_hunk, "Git stage hunk")
+        map("n", "<leader>hr", gs.reset_hunk, "Git reset hunk")
+        map("n", "<leader>hu", gs.undo_stage_hunk, "Git undo stage hunk")
+        map("n", "<leader>hS", gs.stage_buffer, "Git stage buffer")
+        map("n", "<leader>hR", gs.reset_buffer, "Git reset buffer")
+        map("n", "<leader>hp", gs.preview_hunk, "Git preview hunk")
+        map("n", "<leader>hb", function()
+          gs.blame_line({ full = true })
+        end, "Git blame line")
+        map("n", "<leader>hB", gs.toggle_current_line_blame, "Git toggle line blame")
+        map("n", "<leader>hd", gs.diffthis, "Git diff against index")
         map("n", "<leader>hD", function()
           gs.diffthis("@")
-        end, "git [D]iff against last commit")
+        end, "Git diff against last commit")
 
         -- Actions (visual mode)
         map("v", "<leader>hs", function()
           gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
-        end, "Git [s]tage hunk")
+        end, "Git stage hunk")
         map("v", "<leader>hr", function()
           gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
-        end, "Git [r]eset hunk")
+        end, "Git reset hunk")
 
-        -- Toggles
-        map("n", "<leader>tb", gs.toggle_current_line_blame, "Git [t]oggle line [b]lame")
-        map("n", "<leadeer>td", gs.toggle_deleted, "Git [t]oggle [d]eleted")
+        -- text object
+        map({ "o", "x" }, "ih", ":<C-u?Gitsigns select_hunk<CR>", "Gitsigns select hunk")
       end,
     },
   },
