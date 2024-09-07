@@ -42,4 +42,4 @@ opt.clipboard:append("unnamedplus")
 -- Disable mouse
 opt.mouse = ""
 
-opt.cmdheight = 0
+opt.showmode = false
