@@ -2,14 +2,12 @@ return {
   "nvim-lualine/lualine.nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   lazy = false,
-  opts = {
-    theme = "auto",
-    extensions = { "neo-tree", "lazy" },
-  },
   config = function()
     local lazy_status = require("lazy.status")
 
     require("lualine").setup({
+      theme = require("lualine.themes.tokyonight-night"),
+      extensions = { "neo-tree", "lazy" },
       sections = {
         lualine_x = {
           {
