@@ -73,12 +73,6 @@ return {
         })
       end,
 
-      ["tsserver"] = function()
-        lspconfig["ts_ls"].setup({
-          capabilities = capabilities,
-        })
-      end,
-
       ["lua_ls"] = function()
         lspconfig["lua_ls"].setup({
           capabilities = capabilities,
