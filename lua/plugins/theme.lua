@@ -6,6 +6,9 @@ return {
     require("tokyonight").setup({
       style = "night",
       lualine_bold = true,
+      on_colors = function(colors)
+        colors.bg = ""
+      end,
     })
     vim.cmd([[colorscheme tokyonight-night]])
   end,
