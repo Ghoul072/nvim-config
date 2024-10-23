@@ -1,6 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  build = ":TSUpdate",
+  build = ":TSUpdate | :TSEnable highlight",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "windwp/nvim-ts-autotag",
@@ -13,6 +13,7 @@ return {
         "c",
         "diff",
         "html",
+        "hyprlang",
         "javascript",
         "json",
         "lua",

@@ -1,6 +1,13 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  pattern = { "*.hl", "hypr*.conf" },
+  callback = function()
+    vim.cmd("TSEnable highlight")
+  end,
+})
+
 local opt = vim.opt
 
 -- [[ Layout and Window Settings ]]

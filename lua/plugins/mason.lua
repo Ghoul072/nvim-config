@@ -21,10 +21,11 @@ return {
 
     mason_lspconfig.setup({
       ensure_installed = {
-        "ts_ls",
         "html",
         "lua_ls",
+        "hyprls",
         "pyright",
+        "ts_ls",
       },
     })
 
